@@ -92,12 +92,15 @@ def self.find_by_id(id)
 end
 
 def self.find_or_create_by(name:, breed:, id: nil)
-  sql = <<-SQL
-  SELECT *
-  SQL
-  # this_dog = nil
   this_name = name
   this_breed = breed
+  sql = <<-SQL
+  SELECT *
+  FROM dogs
+  WHERE
+  SQL
+  # this_dog = nil
+
   # this_id = id
   #
   # if this_id == nil
