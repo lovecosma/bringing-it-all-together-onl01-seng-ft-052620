@@ -102,13 +102,13 @@ def self.find_or_create_by(name:, breed:, id: nil)
 
   row = DB[:conn].execute(sql, this_name, this_breed).flatten
   this_id = row[0]
-  #
-  # if this_id == nil
-  #   this_dog = Dog.create(name: this_name, breed: this_breed)
-  # else
-  #   this_dog = Dog.find_by_id(this_id)
-  # end
-  # this_dog
+
+  if this_id == nil
+    this_dog = Dog.create(name: this_name, breed: this_breed)
+  else
+    this_dog = Dog.find_by_id(this_id)
+  end
+  this_dog
 end
 
 
