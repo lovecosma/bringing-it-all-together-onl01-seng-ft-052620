@@ -93,6 +93,7 @@ end
 
 def self.find_or_create_by(name:, breed:, id: nil)
   sql = <<-SQL
+  SELECT *
   SQL
   # this_dog = nil
   this_name = name
