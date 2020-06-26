@@ -92,10 +92,10 @@ def self.find_by_id(id)
 end
 
 def self.find_or_create_by(name:, breed:, id: nil)
-  
+
   # this_dog = nil
-  # this_name = name
-  # this_breed = breed
+  this_name = name
+  this_breed = breed
   # this_id = id
   #
   # if this_id == nil
