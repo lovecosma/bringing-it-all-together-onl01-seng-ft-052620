@@ -100,7 +100,7 @@ def self.find_or_create_by(name:, breed:, id: nil)
   WHERE dogs.name = ?, dogs.breed = ?
   SQL
 
-  DB[:conn]
+  DB[:conn].execute()
   # this_dog = nil
 
   # this_id = id
