@@ -99,6 +99,8 @@ def self.find_or_create_by(name:, breed:, id: nil)
   FROM dogs
   WHERE dogs.name = ?, dogs.breed = ?
   SQL
+
+  DB[:conn]
   # this_dog = nil
 
   # this_id = id
