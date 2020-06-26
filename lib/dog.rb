@@ -101,9 +101,6 @@ def self.find_or_create_by(name:, breed:, id: nil)
   SQL
 
   row = DB[:conn].execute(sql, this_name, this_breed).flatten
-  
-
-  # this_dog = nil
 
   # this_id = id
   #
