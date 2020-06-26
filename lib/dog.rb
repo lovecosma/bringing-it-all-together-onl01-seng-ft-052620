@@ -97,7 +97,7 @@ def self.find_or_create_by(name:, breed:, id: nil)
   sql = <<-SQL
   SELECT *
   FROM dogs
-  WHERE
+  WHERE dogs.name = ?, dogs.breed = ?
   SQL
   # this_dog = nil
 
