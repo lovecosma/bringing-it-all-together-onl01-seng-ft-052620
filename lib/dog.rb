@@ -98,7 +98,7 @@ def self.find_or_create_by(name:, breed:, id: nil)
   sql = <<-SQL
   SELECT dogs.id
   FROM dogs
-  WHERE dogs.name = ?, dogs.breed = ?
+  WHERE dogs.name = ?, dogs.breed = ?;
   SQL
 
   row = DB[:conn].execute(sql, this_name, this_breed).flatten
